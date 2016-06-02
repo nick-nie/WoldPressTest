@@ -13,19 +13,17 @@ import java.awt.*;
 /**
  * Created by Administrator on 2016/5/29 0029.
  */
-public class LoginTest extends TestCase{
+public class LoginSuccessTest extends TestCase{
 
     public LoginPage loginPage;
-    public final static String USERNAME = "admin";
-    public final static String PASSWORD = "demo123";
+    public final static String USERNAME = "tiger.mi@abc.com";
+    public final static String PASSWORD = "123456";
 
     @Test
-    public void testScenario(){
-        //loginPage = PageFactory.initElements(driver, LoginPage.class);
+    public void loginMercuryToursWithCorrectCredential(){
         loginPage = new LoginPage(driver);
         loginPage.sendKeyToUsername(USERNAME);
         loginPage.sendKeyToPassword(PASSWORD);
-        loginPage.setRememberMeCheckBox();
         loginPage.clickOnLoginButton();
     }
 }

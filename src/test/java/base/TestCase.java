@@ -15,7 +15,6 @@ import webdriver.listener.ExtentReporterNG;
 @Listeners(ExtentReporterNG.class)
 public class TestCase {
     protected WebDriver driver;
-    public final static String BASEURL = "http://demosite.center/wordpress/wp-login.php";
 
     @BeforeTest
     public void setup(){
